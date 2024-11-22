@@ -64,7 +64,7 @@ const Wallets = () => {
     setLoadingModal(true);
     setTimeout(() => {
       setLoadingModal(false);
-    }, 10000);
+    }, 7000);
   };
 
   const closePreModal = () => {
@@ -201,6 +201,25 @@ const Wallets = () => {
                       </span>
                     </div>
                   ))}
+              {showPreModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                  {loadingModal ? (
+                    <ClipLoader color="#4A90E2" size={50} />
+                  ) : (
+                    <PreModal
+                      wallet={selectedWallet}
+                      closeModal={closePreModal}
+                      proceedToModal={proceedToModal}
+                    />
+                  )}
+                </div>
+              )}
+
+              {showModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                  <Modal wallet={selectedWallet} closeModal={closeModal} />
+                </div>
+              )}
             </div>
           </div>
         </div>
