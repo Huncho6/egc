@@ -25,7 +25,7 @@ const NavBar = () => {
           <FaFacebook className="text-white h-6 w-6" />
         </a>
         <a
-          href="https://twitter.com/evergrowcoinEGC"
+          href="https://x.com/evergrowmod?s=21"
           target="_blank"
           rel="noopener noreferrer"
         >
